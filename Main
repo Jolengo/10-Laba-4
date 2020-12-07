@@ -1,0 +1,17 @@
+package com.company;
+
+import java.io.File;
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+	    File file = new File("catalog");
+        ArrayList<String> catalog = new ArrayList<>();
+        String[] arr = file.list();
+        for (int i=0; i<arr.length; ++i)
+            catalog.add(arr[i]);
+        for (int i=0; i<catalog.size(); ++i)
+            System.out.print(catalog.get(i)+" ");
+    }
+}
